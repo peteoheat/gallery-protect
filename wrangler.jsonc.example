@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gallery-protect",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-10-08",
+
+  "secrets": {
+    "required": ["AUTH_SECRET"]
+  },
+
+  "vars": {
+    "DOMAIN_NAMES": "gallery.example.com"
+  },
+
+  "r2_buckets": [
+    {
+      "binding": "GALLERY_BUCKET",
+      "bucket_name": "YOUR_R2_BUCKET"
+    }
+  ],
+
+  "routes": [
+    {
+      "pattern": "gallery.example.com",
+      "custom_domain": true
+    }
+  ]
+}

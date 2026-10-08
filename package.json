@@ -1,0 +1,21 @@
+{
+  "name": "gallery-protect",
+  "version": "1.0.0",
+  "description": "Password-protect photo galleries stored in Cloudflare R2 using a Cloudflare Worker.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:dry-run": "wrangler deploy --dry-run",
+    "types": "wrangler types",
+    "tail": "wrangler tail gallery-protect",
+    "configure": "node scripts/configure.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.148.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
